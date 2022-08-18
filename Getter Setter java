@@ -1,0 +1,78 @@
+package cl.FelipePardo;
+
+/**
+ *
+ * @author Felipe Pardo
+ */
+public class Pizza {
+    //01 crear atributos de la clase
+    private String nombre, masa, tamano;
+    
+    
+    //02 crear metodos customer
+    public void preparar(){
+        System.out.println("en estos momentos estamos preparando tu pizza");
+    }
+    public void calentar(){
+        System.out.println("en estos momentos se esta calentando tu pizza");
+    
+    }
+
+    public Pizza() {
+        System.out.println("Hola soy el constructor sin parametros");
+    }
+
+    public Pizza(String nombre, String masa, String tamano) {
+        this.nombre = nombre;
+        this.masa = masa;
+        this.tamano = tamano;
+        System.out.println("Hola soy el constructor con parametros");
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+package cl.FelipePardo;
+
+/**
+ *
+ * @author Felipe Pardo
+ */
+//03 Crear 
+public class Pizzeria {
+    public static void main(String[] args) {
+     Pizza pizza1= new Pizza("Vegetariana","Normal","familiar");
+     pizza1.setNombre("española");
+        System.out.println(pizza1.getNombre());
+    }
+   
+}
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getMasa() {
+        return masa;
+    }
+
+    public void setMasa(String masa) {
+        this.masa = masa;
+    }
+
+    public String getTamano() {
+        return tamano;
+    }
+
+    public void setTamano(String tamano) {
+        this.tamano = tamano;
+    }
+
+}
+//05 crear constructores con y sin parametros
+//06 crear accesadores y mutadores(getter y setter)
