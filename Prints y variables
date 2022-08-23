@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package condiciones;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author CETECOM
+ */
+public class CONDICIONES {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese su edad: ");
+    int edad = scanner.nextInt();
+    String clasificacion ="";
+ 
+    if(edad > 0 && edad <7){
+       clasificacion = "Clasifiacion : TE";
+            System.out.println("Clasificacion" + clasificacion );
+            System.out.println("Su edad es: "+ edad+ " años");
+    }else if(edad >=7 && edad <14) {
+    clasificacion = "Clasifiacion : TE+14";
+             System.out.println("Clasificacion" + clasificacion );
+             System.out.println("Su edad es: "+ edad+ " años");
+    }else if (edad >= 18 && edad <= 30){
+    clasificacion = "Clasifiacion : TE+18 ";
+             System.out.println("Clasificacion" + clasificacion );
+             System.out.println("Su edad es: "+ edad+ " años");
+    }else{
+            System.out.println("No existe ese rango para edad");
+            System.out.println("Su edad es: "+ edad+ " años");
+}
+    }}
+    
+              
