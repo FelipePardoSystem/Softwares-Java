@@ -8,3 +8,19 @@ Scanner opcion = new Scanner(System.in);
         }
             
     }}
+    
+    
+    ///////////////////////////////////////////////////////
+    Scanner opcion = new Scanner(System.in);
+        System.out.println("Ingresa un numero: Entre el 1 y el 10\n");
+        int numero = opcion.nextInt();
+        if(numero%2  ==0 && numero>0 && numero<11 ){
+            System.out.println("El numero " + numero + " es par");
+        }else if(numero%2  !=0 && numero>0  && numero<11 ){
+            System.out.println("El numero " + numero + " es inpar");
+        }else{
+            System.out.println("El numero ingresado es mayor que 10 ");
+            
+        }
+            
+    }}
