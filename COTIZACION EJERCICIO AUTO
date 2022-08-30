@@ -1,0 +1,79 @@
+public class Cotizacion {
+    //01 CREAR ATIBUTOS DE COTIZACION
+    private String codigo;
+    private char tipoVehiculo;
+    private int cantidadVehiculo;
+    
+    //02 CREAR CONSTRUCTORES CON Y SIN PARAMETROS DE COTIZACION
+
+    public Cotizacion() {
+    }
+
+    public Cotizacion(String codigo, char tipoVehiculo, int cantidadVehiculo) {
+        this.codigo = codigo;
+        this.tipoVehiculo = tipoVehiculo;
+        this.cantidadVehiculo = cantidadVehiculo;
+    }
+//03 CREAR GETTER Y SETTER CON COTIZACIOES
+   
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public char getTipoVehiculo() {
+        return tipoVehiculo;
+    }
+
+    public void setTipoVehiculo(char tipoVehiculo) {
+        this.tipoVehiculo = tipoVehiculo;
+    }
+
+    public int getCantidadVehiculo() {
+        return cantidadVehiculo;
+    }
+
+    public void setCantidadVehiculo(int cantidadVehiculo) {
+        this.cantidadVehiculo = cantidadVehiculo;
+    }
+    //04 CREAR METODOS CUSTOMER
+    public void imprimirCotizacion(){
+        System.out.println("            COTIZACION          ");
+        System.out.println("Codigo: "+ codigo);
+        System.out.println("Tipo Vehiculo: "+ tipoVehiculo);
+        System.out.println("Cantidad de vehiculos: "+ cantidadVehiculo);
+        System.out.println("============================================");
+        
+    }
+    public void calcularMonto(){
+        double total = 0;
+        double DSCTO= 0.70;
+        int sedan= 8750;
+        int hatch= 8000;
+        int familiar= 10000;
+        int cantidadVehiculo = 5;
+        
+        if(tipoVehiculo == 's' || tipoVehiculo =='S'){
+            total = sedan*cantidadVehiculo;
+        }else if(tipoVehiculo=='h'||tipoVehiculo=='H'){
+            total=hatch*cantidadVehiculo;
+            if(cantidadVehiculo>3){
+                total= (hatch*DSCTO)*cantidadVehiculo;
+            }
+        }else{
+            total=familiar*cantidadVehiculo;
+            
+            //CONTROL S<
+            
+            
+    }
+        
+        
+        
+        
+    }
+    
+}
