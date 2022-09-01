@@ -1,10 +1,10 @@
 public class Cotizacion {
-    //01 CREAR ATIBUTOS DE COTIZACION
+public class Cotizacion {
+    //04 crear atributos de clase Cotizacion
     private String codigo;
     private char tipoVehiculo;
     private int cantidadVehiculo;
-    
-    //02 CREAR CONSTRUCTORES CON Y SIN PARAMETROS DE COTIZACION
+    //08 crear contrusctores con/sin parámetros
 
     public Cotizacion() {
     }
@@ -14,8 +14,8 @@ public class Cotizacion {
         this.tipoVehiculo = tipoVehiculo;
         this.cantidadVehiculo = cantidadVehiculo;
     }
-//03 CREAR GETTER Y SETTER CON COTIZACIOES
-   
+    //09 crear getters y setters
+
     public String getCodigo() {
         return codigo;
     }
@@ -39,41 +39,41 @@ public class Cotizacion {
     public void setCantidadVehiculo(int cantidadVehiculo) {
         this.cantidadVehiculo = cantidadVehiculo;
     }
-    //04 CREAR METODOS CUSTOMER
+    //10 crear métodos customer
     public void imprimirCotizacion(){
-        System.out.println("            COTIZACION          ");
-        System.out.println("Codigo: "+ codigo);
-        System.out.println("Tipo Vehiculo: "+ tipoVehiculo);
-        System.out.println("Cantidad de vehiculos: "+ cantidadVehiculo);
-        System.out.println("============================================");
-        
+        System.out.println("====================");
+        System.out.println("        COTIZACION      ");
+        System.out.println("Codigo: " + codigo);
+        System.out.println("Tipo vehiculo: " + tipoVehiculo);
+        System.out.println("Cantidad de vehiculos: " + cantidadVehiculo);
+        System.out.println("====================");
     }
-    public void calcularMonto(){
+    public double calcularMonto(){
         double total = 0;
-        double DSCTO= 0.70;
-        int sedan= 8750;
-        int hatch= 8000;
-        int familiar= 10000;
-        int cantidadVehiculo = 5;
+        double DSCTO = 0.70;
+        int sedan = 8750;
+        int hatch = 8000;
+        int familiar = 10000;
         
-        if(tipoVehiculo == 's' || tipoVehiculo =='S'){
+        
+        if(tipoVehiculo == 's' || tipoVehiculo == 'S'){
             total = sedan*cantidadVehiculo;
-        }else if(tipoVehiculo=='h'||tipoVehiculo=='H'){
-            total=hatch*cantidadVehiculo;
-            if(cantidadVehiculo>3){
-                total= (hatch*DSCTO)*cantidadVehiculo;
+            
+        }else if(tipoVehiculo == 'h' || tipoVehiculo == 'H'){
+            total = hatch*cantidadVehiculo;
+            if(cantidadVehiculo > 3){
+                total = total * DSCTO;
+                
             }
+        }else if(tipoVehiculo == 'f' || tipoVehiculo == 'F'){
+            total= familiar*cantidadVehiculo;
+            
         }else{
-            total=familiar*cantidadVehiculo;
-            
-            //CONTROL S<
-            
-            
+                System.out.println("Tipo de vehiculo no existe");
+                }
+        System.out.println("Total: "+total);
+        return total;
+        }
+        // control + S
     }
-        
-        
-        
-        
-    }
-    
-}
+  
