@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        
+    //11 Instanciar objeto tipo cliente
+    Cliente cliente1 = new Cliente("20108680-9", "Felipe Pardo", 23, 'M', "Chileno" , "" );
+   //12 Instanciar objeto tipo cotizacion
+    Cotizacion cotizacion1= new Cotizacion("123-PAC", 'h' , 1);
+    
+    cliente1.setCodigo(cotizacion1.getCodigo());
+    cliente1.mostrarCliente();
+    cotizacion1.imprimirCotizacion();
+    cotizacion1.calcularMonto();
+    }
+}
