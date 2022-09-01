@@ -1,16 +1,17 @@
 public class Cliente {
-    //01 CREAR LOS ATRIBUTOS
+    //01 crear atributos
     private String rut;
     private String nombre;
     private int edad;
     private char sexo;
     private String nacionalidad;
+    //05 creamos atributo para colaboracion de clases
     private String codigo;
-  //02 CREAR CONSTRUCTORES CON Y SIN PARAMETROS
-
+    
+    //02 crear constructores con/sin parámetros
     public Cliente() {
     }
-
+    //06 borramos el contructor con parámetros y lo creamos de nuevo con el nuevo atributo
     public Cliente(String rut, String nombre, int edad, char sexo, String nacionalidad, String codigo) {
         this.rut = rut;
         this.nombre = nombre;
@@ -20,9 +21,8 @@ public class Cliente {
         this.codigo = codigo;
     }
 
-
     
-    //03 GETTER Y SETTER
+    //03 crear getters y setters
 
     public String getRut() {
         return rut;
@@ -64,14 +64,25 @@ public class Cliente {
         this.nacionalidad = nacionalidad;
     }
     
-    
-
+    //07 creamos el getter y setter del nuevo atributo
     public String getCodigo() {
         return codigo;
     }
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
+  
     }
+    public void mostrarCliente(){
+        System.out.println("=============Datos===============");
+        System.out.println("rut: "+ rut);
+        System.out.println("nombre: "+ nombre);
+        System.out.println("edad: "+ edad);
+        System.out.println("sexo: "+ sexo);
+        System.out.println("nacionaldad: "+ nacionalidad);
+        System.out.println("codigo: "+ codigo);
+        System.out.println("================================");
+        
+    }
+// control + S
 }
-//04 GUARDAMOS Y CERRAMOS
