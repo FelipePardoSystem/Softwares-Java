@@ -1,0 +1,99 @@
+public class Cancion {
+    
+private String titulo;
+private String artista;
+private int duracion;
+private char favorita;
+private char descarga;
+
+    public Cancion() {
+    }
+
+    public Cancion(String titulo, String artista, int duracion, char favorita, char descarga) {
+        this.titulo = titulo;
+        this.artista = artista;
+        this.duracion = duracion;
+        this.favorita = favorita;
+        this.descarga = descarga;
+    }
+
+    public String getTirulo() {
+        return titulo;
+    }
+
+    public void setTirulo(String tirulo) {
+        this.titulo = tirulo;
+    }
+
+    public String getArtista() {
+        return artista;
+    }
+
+    public void setArtista(String artista) {
+        this.artista = artista;
+    }
+
+    public int getDuracion() {
+        return duracion;
+    }
+
+    public void setDuracion(int duracion) {
+        this.duracion = duracion;
+    }
+
+    public char getFavorita() {
+        return favorita;
+    }
+
+    public void setFavorita(char favorita) {
+        this.favorita = favorita;
+    }
+
+    public char getDescarga() {
+        return descarga;
+    }
+
+    public void setDescarga(char descarga) {
+        this.descarga = descarga;
+    }
+
+public void adelantarCancion(){
+    int segundos=10;
+    int actual=120;
+    
+    actual= actual + segundos;
+    
+    
+  
+
+}
+public void imprimirCancion(){
+    int segundos= duracion;
+    int minutos =duracion/60;
+    segundos %= 60;
+  
+    System.out.println("===================");
+    System.out.println("CANCION");
+    System.out.println("Titulo: "+titulo);
+    System.out.println("Artista: "+artista);
+    if(segundos<10){
+        System.out.println("Duracion: " + minutos + ":0" + segundos);
+    }else{
+        System.out.println("Duracion: " + minutos + ":" + segundos);
+    }
+ 
+}
+public String cancionLargo(){
+    String tipo;
+    if (duracion>=300){
+        tipo="Larga";
+    }else{
+        tipo="Normal";    
+    }
+    System.out.println("Cancion"+ tipo);
+    return tipo;
+}
+
+
+
+}
