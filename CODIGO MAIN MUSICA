@@ -1,0 +1,14 @@
+public class Lista {
+    public static void main(String[] args) {
+        
+        Cancion cancion1=new Cancion("Los pollitos dicen", "Mi mamá",345,'s','d');
+        Cancion cancion2=new Cancion("A la camita","Topo Gigio",254,'n','n');
+        
+        cancion1.imprimirCancion();
+        cancion1.cancionLargo();
+        
+        cancion2.imprimirCancion();
+        cancion2.cancionLargo();
+    }
+    
+}
