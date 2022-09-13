@@ -1,0 +1,39 @@
+    public static void main(String[] args) {
+//FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR FOR 
+    
+    //    for (int i = 0; i < 10; i = i+2) {
+    //        System.out.println("i = " +i);
+    //        
+     //   }
+        
+ // COMO REDUCIR  UN VALOR VARIABLE
+//        for (int i = 10 ; i > 0; i--) {
+//            System.out.println("i con reduccion en 1 : " + i);
+            
+//        }
+
+//        for (int i = 0; i <= 10; i++) {
+//            if (i%2 == 0 ){
+//                continue;
+            //if(i%2==0){
+             //   System.out.println(i + " Es numero par");
+            //}else{
+            //    System.out.println(i +" Es numero inpar");
+//            }
+//            System.out.println(i+ " Es un numero . . .");
+//         boolean flag= true;         
+//         while (flag) { 
+//             System.out.println("Me imprimire?");
+//             flag = false;
+//            
+//        }
+  int i = 0; 
+while (i <=9){
+    int resultado;
+    resultado = 1* i;
+    System.out.println("La multiplicacion de 1 x " + i + " = "+ resultado);
+    i= i + 1;
+        }
+        }
+    
+    
