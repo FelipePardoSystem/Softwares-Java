@@ -1,0 +1,33 @@
+    public static void main(String[] args) {
+        ArrayList<String> listaCadenas = new ArrayList<>();
+        //01 agregar elementeos a nuestro array 
+        listaCadenas.add("Hola");
+        listaCadenas.add("Como");
+        listaCadenas.add("Estas");
+        //02 Para obtener el largo o tamaño del Array
+//        System.out.println(listaCadenas.size());
+        //03 Para elminar un elemento del Array
+//        listaCadenas.remove("Como"); //Eliminamos el como del arreglo , dejando solo el ,Hola , estas
+//        System.out.println(listaCadenas);
+        //04 CLEAR SIRVE PARA ELIMINAR TODOS LOS ELEMENTOS DE UN ARRAY
+//        listaCadenas.clear();
+//        System.out.println(listaCadenas);
+        //05 EL GET ES PARA OBTENER UN OBJETO A PARTIR DE SU POSICION 
+//        System.out.println(listaCadenas.get(0));
+//        System.out.println(listaCadenas.get(listaCadenas.size() - 1));
+        
+//        for(int i = 0; i < listaCadenas.size() ;i++){
+//            System.out.println(listaCadenas.get(i));
+//              if(i==1){
+//                  listaCadenas.remove(i);
+//                  System.out.println(listaCadenas);
+//              }
+//        }
+//    for (String temp :listaCadenas ){
+//        System.out.println(temp);
+    
+//        }
+    
+    
+     }
+   }
