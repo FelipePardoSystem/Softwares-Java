@@ -1,0 +1,17 @@
+public class Evento {
+       private ArrayList<Cotizacion> listaCotizacion = new ArrayList<>();
+       
+       public Evento(){
+           listaCotizacion = new ArrayList<Cotizacion>();
+           
+       }
+       public boolean agregarCotizacion(Cotizacion coti){
+           return listaCotizacion.add(coti);
+       }
+       
+       public void listar(){
+           for (Cotizacion temp: listaCotizacion){
+               System.out.println(temp);
+           }
+       }
+}
