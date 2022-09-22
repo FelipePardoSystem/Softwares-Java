@@ -1,0 +1,78 @@
+public class Cotizacion { 
+        private int codigo, precio , cantidad;
+        private Date fecha;
+        private String ubicacion , tipoEvento;
+        private boolean servicio;
+
+    public Cotizacion() {
+    }
+
+    public Cotizacion(int codigo, int precio, int cantidad, Date fecha, String ubicacion, String tipoEvento, boolean servicio) {
+        this.codigo = codigo;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.fecha = fecha;
+        this.ubicacion = ubicacion;
+        this.tipoEvento = tipoEvento;
+        this.servicio = servicio;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public String getTipoEvento() {
+        return tipoEvento;
+    }
+
+    public void setTipoEvento(String tipoEvento) {
+        this.tipoEvento = tipoEvento;
+    }
+
+    public boolean isServicio() {
+        return servicio;
+    }
+
+    public void setServicio(boolean servicio) {
+        this.servicio = servicio;
+    }
+
+
+
+}
