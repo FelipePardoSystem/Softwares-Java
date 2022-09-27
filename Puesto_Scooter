@@ -1,0 +1,43 @@
+public class Puesto {
+    //01 creamos los atributos de puesto
+    private int codigo;
+    private String nombrePuesto;
+
+    //02 creamos constructores sin y con parametros
+
+    public Puesto() {
+    }
+
+    public Puesto(int codigo, String nombrePuesto) {
+        this.codigo = codigo;
+        this.nombrePuesto = nombrePuesto;
+    }
+
+    //03 creamos nuestros getter y setter
+
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombrePuesto() {
+        return nombrePuesto;
+    }
+
+    public void setNombrePuesto(String nombrePuesto) {
+        this.nombrePuesto = nombrePuesto;
+    }
+    //04 creamos un metodo toString
+
+    @Override
+    public String toString() {
+        return "Puesto{" +
+                "codigo=" + codigo +
+                ", nombrePuesto='" + nombrePuesto + '\'' +
+                '}';
+    }
+}
