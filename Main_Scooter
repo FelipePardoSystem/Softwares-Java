@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+        //15 instanciamos objetos tipo puesto
+        Puesto puesto1 = new Puesto(1, "gerente");
+        Puesto puesto2 = new Puesto(2, "ejecutivo");
+        //16 instanciamos objetos tipo empleado
+        Empleado empleado1 = new Empleado("12345678-9", "John", 'M', 10, 56, puesto1);
+        Empleado empleado2 = new Empleado("12345678-k", "Juanita", 'F', 2, 25, puesto2);
+        //17 instanciamos objeto tipo empresa
+        Empresa empresa = new Empresa();
+
+        //18 agregar empleado 1 con todas las validaciones
+        empresa.agregar(empleado1);
+        System.out.println("Se agregó empleado: " + empleado1.getNombreEmpleado());
+
+        //19 agregar empleado 2
+        empresa.agregar(empleado2);
+        System.out.println("Se agregó empleado: " + empleado2.getNombreEmpleado());
+
+
+
+        //20 eliminar (debiese dar falso ya que ese rut no figura en nuestros empleados)
+        empresa.eliminarEmpleado("2-8");
+        //21 listamos los empleados
+        empresa.listarEmpleados();
+
+        //EN LA SECCION EMPLEADO DEJE UNAS VALIDACIONES, SI QUIERE PODRIA VALIDAR LOS CAMPOS ANTES DE GUARDAR UN EMPLEADO
+    }
+}
