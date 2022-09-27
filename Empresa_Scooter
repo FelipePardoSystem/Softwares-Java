@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+public class Empresa {
+    
+
+    //10 instanciamos un ArrayList, ya que es donde almacenaremos o coleccionaremos a nuestros empleados
+    private ArrayList<Empleado> listaEmpleados= new ArrayList<>();
+
+    //10.1 creamos un constructor y le entregamos la lista de empleados
+    public Empresa() {
+        listaEmpleados = new ArrayList<Empleado>();
+    }
+
+    //11 metodo para agregar empleados a nuestra empresa
+    //recibe un argumento que es un empleado de la clase Empleado y retornara la lista con el empleado ingresado
+    public boolean agregar(Empleado empleado){
+
+        return listaEmpleados.add(empleado);
+    }
+    //12 metodo para buscar un empleado, lo buscaremos por su atributo rut ya que debiese ser unico
+    public boolean buscarEmpleado(String rut){
+        //12.1 recorremos la lista de empleados con nuestro for each y condicionamos que...
+        //si el rut ingresado es igual a algun rut que ya esta en la lista nos mande un true
+        for (Empleado empleado : listaEmpleados){
+            if(empleado.getRut().equals(rut)){
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+    //13 metodo para eliminar un empleado, lo buscaremos por su atributo rut ya que debiese ser unico
+    //13.1 recorremos la lista de empleados con nuestro for each y condicionamos que...
+    //si el rut ingresado es igual a algun rut que ya esta en la lista nos mande un true
+    public boolean eliminarEmpleado(String rut){
+        for(Empleado empleado : listaEmpleados){
+            if(empleado.getRut().equals(rut)){
+                listaEmpleados.remove(empleado);
+                System.out.println("empleado eliminado");
+                return true;
+            }
+        }
+        System.out.println("empleado no existe en nuestros registro para eliminar");
+        return false;
+    }
+    //14 listar empleados, luego crear una clase Main con el metodo main
+    public void listarEmpleados(){
+        for(Empleado empleado : listaEmpleados){
+            System.out.println(empleado);
+        }
+    }
+    //listar todos los ejecutivos
+    public void listarEmpleadosEjecutivos(){
+        for(Empleado empleado : listaEmpleados){
+            if(empleado.getPuesto().getNombrePuesto().equals("ejecutivo")){
+                System.out.println(empleado.toString());
+            }
+        }
+    }
+
+    
+}
