@@ -1,0 +1,122 @@
+ public class Empleado {
+    //5 repetimos el proceso para construir una clase (atributos, constr, getter y setter, metodos customer, etc)
+    //6 creamos atributos de la clase
+    private String rut, nombreEmpleado;
+    private char genero; //M o F
+    private int anio, edad;
+    //6.1 creamos un atributo llamado puesto que es de tipo Puesto
+    // esta es otra manera de crear colaboracion de clases, mas que manipular un atributo, manipularemos el objeto completo
+    private Puesto puesto;
+
+    //07 creamos constructores
+    public Empleado() {
+
+        puesto = new Puesto();
+    }
+
+    public Empleado(String rut, String nombreEmpleado, char genero, int anio, int edad, Puesto puesto) {
+        this.rut = rut;
+        this.nombreEmpleado = nombreEmpleado;
+        this.genero = genero;
+        this.anio = anio;
+        this.edad = edad;
+        this.puesto = puesto;
+    }
+    //08 creamos getter y setter
+    public String getRut() {
+        return rut;
+    }
+
+    public void setRut(String rut) {
+        this.rut = rut;
+    }
+
+    public String getNombreEmpleado() {
+        return nombreEmpleado;
+    }
+
+    public void setNombreEmpleado(String nombreEmpleado) {
+        this.nombreEmpleado = nombreEmpleado;
+    }
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public Puesto getPuesto() {
+        return puesto;
+    }
+
+    public void setPuesto(Puesto puesto) {
+        this.puesto = puesto;
+    }
+
+    //09 creamos metodo toString
+
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "rut='" + rut + '\'' +
+                ", nombreEmpleado='" + nombreEmpleado + '\'' +
+                ", genero=" + genero +
+                ", anio=" + anio +
+                ", edad=" + edad +
+                ", puesto=" + puesto +
+                '}';
+    }
+
+    //BONUS, validaciones
+    //BONUS valida edad minima 18 años
+    public boolean validarEdad(int edad) {
+        if (edad >= 18) {
+            return true;
+        } else {
+            System.out.println("edad no permitida");
+            return false;
+        }
+    }
+
+    //BONUS valida genero F o M
+    public boolean validarGenero(char genero) {
+        if (genero == 'F' || genero == 'M') {
+            return true;
+        } else {
+            System.out.println("genero no permitido");
+            return false;
+        }
+    }
+
+    //BONUS valida nombre que no venga vacio
+    public boolean validarNombre(String nombre) {
+        if (nombre.isEmpty()) {
+            System.out.println("nombre no puede ser vacio");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
+}
+    
