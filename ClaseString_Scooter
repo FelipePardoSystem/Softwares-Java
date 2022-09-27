@@ -1,0 +1,17 @@
+public class STRING  {
+    public static void main(String[] args) {
+        String nombre = "Fernando";
+
+        System.out.println("largo: " + nombre.length());
+        System.out.println("mayusculas: " + nombre.toUpperCase());
+        System.out.println("minusculas: " + nombre.toLowerCase());
+        System.out.println("es igual?: " + nombre.equals("Fernando"));
+        System.out.println("ignorando mayus y minus: " + nombre.equalsIgnoreCase("fernando"));
+        System.out.println("convirtiendo en char: " + nombre.charAt(0));
+        System.out.println("capturar a partir de un inicio: " + nombre.substring(3));
+        System.out.println("reemplazar: " + nombre.replace("n", "."));
+        System.out.println("encontrar posicion (1era): " + nombre.indexOf('n'));
+        System.out.println("encontrar posicion (ultima): " + nombre.lastIndexOf('n'));
+
+    }
+}
